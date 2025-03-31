@@ -1,0 +1,337 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind other content */
+}
+body {
+    font-family: "Courier New", monospace;
+    line-height: 1.6;
+    font-weight: bold;
+    background-color: #121212; /* Dark background for body */
+    color: #e0e0e0; /* Light text color */
+}
+/* Typing Effect Style */
+#typing-text {
+    font-size: 36px;
+    font-family: "Courier New", monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white; /* Create the cursor */
+    display: inline-block; /* Keep the text and cursor together */
+    color: white; /* Make text white */
+    animation: blink-caret 0.8s step-end infinite; /* Add blinking animation */
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent; /* Cursor disappears halfway */
+    }
+
+    100% {
+        border-color: white; /* Cursor appears again */
+    }
+}
+.hover-underline {
+    font-size: 1rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
+    .hover-underline::after,
+    .hover-underline::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, #f39c12, #f39c12);
+        bottom: 0px;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease-out;
+    }
+    .hover-underline::before {
+        top: -5px;
+        transform-origin: left;
+    }
+    .hover-underline:hover::after,
+    .hover-underline:hover::before {
+        transform: scaleX(1);
+    }
+
+/* Container for general content */
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: black; /* Dark background for navbar */
+    color: #fff;
+    padding: 0px 0;
+    
+}
+    nav .container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+                nav ul li a:hover {
+                    color: #f39c12; /* Orange color for hover effect */
+                }
+
+/* Header Section */
+header {
+    /*background-image: url('path/to/your/background-image.jpg');  Replace with your background image */
+    background-size: cover;
+    color: white;
+    padding: 80px 0;
+    margin: 80px;
+    text-align: center;
+
+}
+
+    header .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    header h1 {
+        font-family: "Courier New", monospace;
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        font-family: "Courier New", monospace;
+        margin-top: 10px;
+
+    }
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+    .social-icon:hover {
+        color: #f39c12; /* Hover effect with an orange color */
+    }
+
+/* Section Styling */
+section {
+    /*background-color: ; Dark background for sections */
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f39c12; /* Orange color for section titles */
+    text-align: center;
+    font-weight: bold;
+
+}
+h3 {
+    text-decoration: underline;
+}
+h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #f39c12; /* Orange color for section titles */
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+}
+
+    ul li {
+        
+        margin-bottom: 10px;
+        padding: 10px;
+       
+    }
+
+        ul li h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: #f39c12; /* Orange color for project titles */
+        }
+
+        ul li p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            ul li a:hover {
+                color: #f39c12; /* Hover effect with orange */
+            }
+/* Container to hold image and text */
+.about-container {
+    background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
+    padding: 20px; /* Adds some spacing inside */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+.about-container h2 {
+    background-color: black;
+}
+.about-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+    text-align: center; /* Center text */
+}
+
+/* Styling for the image */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    max-width: 300px;
+    height: auto;
+}
+
+.about-container p {
+    max-width: 600px;
+    font-size: 15px;
+    text-align: justify;
+}
+.experience-container {
+    background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
+    padding: 20px; /* Adds some spacing inside */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+.experience-container h3{
+    margin-left: 10%;
+    height: auto;
+
+}
+    .experience-container p {
+        margin-left: 10%;
+        height: auto;
+    }
+   
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 6 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto; /* Center the grid */
+
+}
+.project-container {
+    background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
+    padding: 20px; /* Adds some spacing inside */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+/* Card Styling */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color:black;
+    font-weight:bold;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        grid-template-rows: repeat(4, 1fr); /* 4 rows */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        grid-template-rows: repeat(6, 1fr); /* 6 rows */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+        grid-template-rows: repeat(12, 1fr); /* 12 rows */
+    }
+}
+.contact-container {
+    background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
+    padding: 20px; /* Adds some spacing inside */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+/* Footer Section */
+footer {
+    background-color: #1f1f1f; /* Dark background for footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+            color: #f39c12; /* Hover effect with orange */
+        }
