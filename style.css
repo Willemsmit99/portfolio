@@ -21,7 +21,7 @@ body {
 }
 /* Typing Effect Style */
 #typing-text {
-    font-size: 36px;
+    font-size: 3rem;
     font-family: "Courier New", monospace;
     white-space: nowrap;
     overflow: hidden;
@@ -47,8 +47,8 @@ body {
     position: relative;
     display: inline-block;
 }
-    .hover-underline::after,
-    .hover-underline::before {
+.hover-underline::after,
+.hover-underline::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -60,14 +60,14 @@ body {
         transform-origin: right;
         transition: transform 0.4s ease-out;
     }
-    .hover-underline::before {
+.hover-underline::before {
         top: -5px;
         transform-origin: left;
     }
-    .hover-underline:hover::after,
-    .hover-underline:hover::before {
-        transform: scaleX(1);
-    }
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+       transform: scaleX(1);
+}
 
 /* Container for general content */
 .container {
@@ -80,16 +80,17 @@ nav {
     background-color: black; /* Dark background for navbar */
     color: #fff;
     padding: 0px 0;
-    
+    position: sticky;
 }
-    nav .container {
+
+nav .container {
         width: 90%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
 
-    }
+}
 
     nav ul {
         list-style: none;
@@ -104,6 +105,7 @@ nav {
                 color: #fff;
                 text-decoration: none;
                 font-size: 16px;
+                
             }
 
                 nav ul li a:hover {
@@ -129,10 +131,11 @@ header {
     header h1 {
         font-family: "Courier New", monospace;
         font-size: 2rem;
+
     }
 
     header p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-family: "Courier New", monospace;
         margin-top: 10px;
 
@@ -150,9 +153,9 @@ header {
     text-decoration: none;
 }
 
-    .social-icon:hover {
-        color: #f39c12; /* Hover effect with an orange color */
-    }
+.social-icon:hover {
+     color: #f39c12; /* Hover effect with an orange color */
+}
 
 /* Section Styling */
 section {
@@ -161,6 +164,7 @@ section {
     padding-left: 50px;
     padding-right: 50px;
     font-weight: bold;
+
 }
 
 h2 {
@@ -172,7 +176,8 @@ h2 {
 
 }
 h3 {
-    text-decoration: underline;
+    
+
 }
 h4 {
     font-size: 1.8rem;
@@ -192,13 +197,13 @@ ul {
     }
 
         ul li h3 {
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             margin-bottom: 10px;
             color: #f39c12; /* Orange color for project titles */
         }
 
         ul li p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-bottom: 10px;
         }
 
@@ -213,19 +218,17 @@ ul {
             }
 /* Container to hold image and text */
 .about-container {
-    background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
+    background-color: rgba(00, 0, 0, 0.8); /* Light grey with 50% transparency */
     padding: 20px; /* Adds some spacing inside */
     border-radius: 10px; /* Optional: adds rounded corners */
-}
-
-.about-container h2 {
-    background-color: black;
-}
-.about-container {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center content */
     text-align: center; /* Center text */
+}
+
+.about-container h2 {
+    background-color: black;
 }
 
 /* Styling for the image */
@@ -243,86 +246,492 @@ ul {
 }
 
 .about-container p {
+    height: auto;
     max-width: 600px;
-    font-size: 15px;
+    font-size: 18px;
     text-align: justify;
 }
 .experience-container {
-    background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
-    padding: 20px; /* Adds some spacing inside */
-    border-radius: 10px; /* Optional: adds rounded corners */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
 }
-.experience-container h3{
-    margin-left: 10%;
-    height: auto;
+
+.experience-item {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #;
+    color: black;
+    margin-bottom: 10px;
+    width:80%;
 
 }
-    .experience-container p {
+
+.experience-title {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    background-color: #f39c12; /* Color when active */
+        color: black; /* Change text color when active */
+        font-size: 1rem;
+}
+    .experience-title h3 {
+        margin-right: 10px;
+    }
+.date {
+    margin-left: auto; /* Push the date to the right */
+    margin-right: 10px;
+    
+}
+
+.arrow {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease; /* Smooth transition for arrow */
+}
+
+.experience-title.active .arrow {
+    transform: rotate(360deg); /* Rotate the arrow to make it look like a minus */
+}
+
+.experience-details {
+    display: none;
+    padding: 15px;
+    background-color: rgba(00, 0, 0, 0.8); /* Light grey with 50% transparency */
+    font-size: 1rem;
+    border-left: 3px solid #f39c12;
+    border-radius: 0 0 5px 5px;
+    color: #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: max-height 0.5s ease-out; /* Smooth transition for hover effects */
+}
+.experience-title.active + .experience-details {
+    /*display: block;  Display the details when the title is active */
+    max-height: 800px; /* Or a value larger than your tallest content */
+}
+.experience-title:hover {
+    color: #001F3F;
+    background-color: #fff;
+    
+}
+    .experience-title.active {
+        background-color: #f39c12; /* Color when active */
+        color: black; /* Change text color when active */
+        display: active;
+
+    }
+/* Styling the header row with icons */
+.experience-header-row {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Add space between the icons and other content */
+    position: relative;
+    margin-bottom: px;
+}
+
+    .experience-header-row i {
+        font-size: 1.2rem; /* Icon size */
+        color: #f39c12; /* Icon color */
+
+
+    }
+    .experience-header-row span {
+        margin:10px;
+        font-size: 1rem; /* Icon size */
+        color: #f39c12; /* Icon color */
+
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Horizontal and vertical offset (0,0) and blur radius (10px) */
+    
+    }
+.experience-contact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    
+}
+
+.contact-info {
+    max-width: 70%;
+    color: #f39c12;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    font-size: 1rem;
+}
+
+    .contact-info i {
+        margin-right: 8px;
+        color: #f39c12;
+    }
+
+    .contact-info a {
+        color: #f39c12;
+        text-decoration: none;
+        word-break: break-word;
+    }
+
+.company-logo {
+    width: 180px; /* Set a fixed width */
+    /*height: auto;  Maintain aspect ratio */
+    max-height: 150px; /* Optional: limit height */
+    /*object-fit: contain;  Makes image fit without distortion */
+    border-radius: 12px; /* Optional: rounded corners */
+    aspect-ratio: 4 / 3;
+    display: block;
+
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.experience-skills {
+    display: flex; /* To display the skills in a row */
+    gap: 10px; /* Adds space between the skills */
+    padding: 10px; /* Padding inside the container */
+    /*border: 2px solid #333;  Border around the container */
+    /*border-radius: 8px;  Optional: Rounded corners for the container */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  Light shadow around the container */
+
+    
+}
+
+.skill {
+    
+    padding: 3px 12px; /* Padding around the skill text */
+    background-color: black; /* Background color for each skill */
+    border: 1px solid #ccc; /* Border around each skill */
+    border-radius: 4px; /* Optional: Rounded corners for the skill boxes */
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.1); /* Light shadow around each skill */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.custom-link {
+    color: #f39c12; /* Change the link color */
+    text-decoration: none; /* Remove underline */
+}
+
+    .custom-link:hover {
+        color: #0056b3; /* Change color on hover */
+        text-decoration: underline; /* Optionally add underline on hover */
+    }
+
+
+.skills-container {
+    background-color: rgba(255, 255,255, 1); /* Light grey with 50% transparency */
+    padding: 20px; /* Adds some spacing inside */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    align-items: center;
+}
+
+    .skills-container h3 {
         margin-left: 10%;
         height: auto;
     }
-   
-.card-container {
+
+    .skills-container p {
+        margin-left: 10%;
+        height: auto;
+
+    }
+.skills-image {
+    height: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 6 columns */
+    grid-template-columns: repeat(10, 1fr); /* 6 columns */
     grid-template-rows: repeat(2, 1fr); /* 2 rows */
     gap: 20px; /* Space between cards */
     padding: 20px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto; /* Center the grid */
-
+    
 }
+    .skills-image img {
+        width: 100%; /* Make sure images take up the full width of their container */
+        height: 100%; /* Set a fixed height */
+        object-fit: contain; /* Ensures the image covers the given dimensions without distortion */
+        background-color: white;
+        text-align: center;
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+        .skills-image img:hover {
+            -webkit-filter: blur(5px);
+            transition: 1s ease;
+        }
+
 .project-container {
-    background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
     padding: 20px; /* Adds some spacing inside */
     border-radius: 10px; /* Optional: adds rounded corners */
+    
 }
-/* Card Styling */
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    text-align: center;
+.card-section {
+    
+    padding: 20px 20px;
+    
+}
+
+.card-row {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-weight: bold;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color:black;
-    font-weight:bold;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
+.card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+.card-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #000;
+    
+}
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        display: block;
+    }
+
+.card-description {
+    padding: 15px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+
 
 /* Responsive for smaller screens */
+/* Large tablets and smaller desktops (1024px and below) */
 @media (max-width: 1024px) {
-    .card-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-        grid-template-rows: repeat(4, 1fr); /* 4 rows */
+
+    .skills-image {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .company-logo {
+        width: 150px;
+        height: auto;
     }
 }
 
+/* Tablets and larger phones (768px and below) */
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-        grid-template-rows: repeat(6, 1fr); /* 6 rows */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-image {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .about-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-image img {
+        max-width: 80%;
+    }
+    .experience-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .company-logo {
+        width: 100px;
+        height: auto;
+        position: static;
+        margin: 0 auto 10px;
+    }
+
+    .skills-container h3,
+    .skills-container p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .contact-container {
+        padding: 15px;
     }
 }
 
+/* Mobile devices (480px and below) */
 @media (max-width: 480px) {
     .card-container {
-        grid-template-columns: repeat(1, 1fr); /* 1 card per row */
-        grid-template-rows: repeat(12, 1fr); /* 12 rows */
+        grid-template-columns: 1fr;
+    }
+
+    .skills-image {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .company-logo {
+        width: 80px;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 0.5rem;
+    }
+
+    header p {
+        font-size: 0.3rem;
+    }
+
+    #typing-text {
+        font-size: 0.1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+        margin: 0 10px;
     }
 }
+
+/* Contact Form Styling */
+#contact {
+    color: #fff;
+}
+
 .contact-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
     background-color: rgba(00, 0, 0, 0.5); /* Light grey with 50% transparency */
     padding: 20px; /* Adds some spacing inside */
     border-radius: 10px; /* Optional: adds rounded corners */
 }
+
+    .contact-container h2 {
+        font-size: 2rem;
+        color: #f39c12;
+        margin-bottom: 20px;
+    }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+    .form-group label {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        background-color: #262626;
+        color: #fff;
+        font-size: 1rem;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f39c12;
+        }
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submit-btn {
+    background-color: #f39c12;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .submit-btn:hover {
+        background-color: #e67e22;
+    }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    .contact-form {
+        gap: 10px;
+    }
+}
+
 /* Footer Section */
 footer {
     background-color: #1f1f1f; /* Dark background for footer */
     color: white;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 

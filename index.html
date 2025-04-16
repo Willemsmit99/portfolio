@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <!-- FontAwesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav>
         <div class="container">
+            <p><</p>
             <ul>
                 <li class="hover-underline"><a href="#home">Home</a></li>
                 <li class="hover-underline"><a href="#about">About</a></li>
@@ -19,6 +22,7 @@
                 <li class="hover-underline"><a href="#experience">Experience</a></li>
                 <li class="hover-underline"><a href="#contact">Contact</a></li>
             </ul>
+            <p>/></p>
         </div>
     </nav>
 
@@ -38,8 +42,10 @@
                 <a href="https://www.instagram.com/willem_wikkelspies/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@willemsmit5984" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
             </div>
+
         </div>
     </header>
+
     <section id="about">
         <div class="about-container">
             <h2>About Me</h2>
@@ -48,119 +54,430 @@
                     <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\WSmit about.png" alt="Willem Smit" />
                 </div>
                 <p>
-                    I am a 25-year-old IT Specialist located in Cape Town, South Africa. My career in the IT sector began in 2021, right after my studies.
-                    From a young age I was always interest in technology, games and building things with my hand. This early interest has evolved into a deep passion for technology.<br> <br>
-                    Throughout my career, I have engaged in various projects, where I had to lead the project and focus on the tactical and technical aspects.
-
-                    I have encountered numerous challenges in the IT realm, particularly in managing servers, firewalls, and VOIP systems,
-                    which has allowed me to gain extensive knowledge in these areas. I take great satisfaction in diagnosing problems and
-                    implementing effective solutions to ensure seamless operations.<br><br>
-                    Although my primary expertise lies in IT infrastructure, I also have a keen interest in coding, which I pursue as a hobby.
-                    I possess the skills and enthusiasm to tackle website development and programming projects, and I am always eager to discover
-                    new opportunities within the technology sector.<br><br>
+                    I'm a 26-year-old IT Specialist based in Cape Town, South Africa.
+                    Since starting my career in 2021, I’ve been driven by a lifelong passion for technology, gaming, and building things from the ground up.
+                    <br><br>
+                    My work has involved leading projects and managing both technical and tactical aspects, particularly in IT infrastructure.
+                    I’ve gained strong experience in servers, firewalls, and VoIP systems, and I enjoy solving complex issues to keep systems
+                    running smoothly.
+                    <br><br>
+                    Beyond infrastructure, I have a strong interest in coding and enjoy building websites and apps in my spare time.
+                    I'm always looking to learn more and explore new opportunities in the tech world.
+                    <br><br>
                 </p>
             </div>
         </div>
     </section>
 
     <section id="experience">
+
         <div class="experience-container">
             <h2>Experience</h2>
-            <ul>
-                <li>
-                    <h3><a href="https://www.dkps.org.za/">De Kuilen Primary School IT Specialist & Educator</a> </h3>
-                    <p><strong>Duration:</strong>January 2021 - Present </p>
-                    <p>
-                        •	Technical Support<br>
-                        •	Server & network management<br>
-                        •	Project Management<br>
-                        •	IT Modernization<br>
-                        •	Sound Technician<br>
-                        •	Profile Head – ICT & Sound and lighting<br>
-                        •	Teaching Gr.1 – Gr.7 (Cami - & Greenshoots Maths)<br>
-                        •	Extra-mural sport & Robotix<br>
-                        •	Office 365 Admin<br>
-                        •	ESET Admin<br>
-                        •	Windows Server 2019<br>
-                        •	IT Workshops<br>
-                        •	SGBS secretary<br>
-                    </p>
-                </li>
-                <li>
-                    <h3><a href="https://www.getwine.co.za/">GetWine</a></h3>
-                    <p><strong>Duration:</strong>January 2019 – December 2020</p>
-                    <p>
-                        •	Packing Process<br>
-                        •	Delivery of stock<br>
-                        •	Time Management<br>
-                    </p>
-                </li>
-                <li>
-                    
-                    <h3><a href="https://www.facebook.com/photo.php?fbid=2302523256449203&id=832358406799036&set=a.832375330130677">Jump- & Ropeyard Instructor</a></h3>
-                    <p><strong>Duration:</strong>January 2018 – March 2020</p>
-                    <p>
-                        •	Supervision and guidance<br>
-                        •	Safety regulation<br>
-                        •	Inventory<br>
-                        •	Cash up<br>
+            <div class="experience-item">
+                <div class="experience-title" onclick="toggleDropdown('exp1',this)">
+                    <h3>IT Specialist & Educator @ De Kuilen Primary School</h3>
+                    <span class="date">2021 - Present</span>
+                    <span class="arrow">+</span>
+                </div>
+                <div class="experience-details" id="exp1">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\dkps emblem.png" alt="Company Logo" class="company-logo">
 
+                    <div class="experience-header-row">
+                        <i class="fa-solid fa-map-pin"></i> <!-- Location Pin Icon -->
+                        <span>Kuils River, South Africa</span>
+                        <i class="fa-solid fa-link"></i> <!-- Website Link Icon -->
+                        <span><a href="www.dkps.org.za" class="custom-link">www.dkps.org.za</a></span>
+                    </div>
+                    <p>
+                        Delivering comprehensive technical support and managing server and network
+                        infrastructure, including Windows Server 2019. Leading IT modernization and
+                        project initiatives, while administering Office 365 and ESET systems. 
+                        Overseeing ICT and sound/lighting operations as Profile Head, supporting 
+                        events as a sound technician. Educating learners from Grade 1 to 7 using Cami 
+                        and Greenshoots Maths, coaching robotics and sports, and conducting IT workshops.
+                        Also serving as SGBS secretary, providing organizational and administrative support.
                     </p>
-                </li>
-            </ul>
+                    <div class="experience-skills">
+                        <span class="skill">ICT</span>
+                        <span class="skill">Network Admin</span>
+                        <span class="skill">Coding & Robotix</span>
+                        <span class="skill">Coach</span>
+                        <span class="skill">ESET</span>
+                        <span class="skill">SGBS</span>
+                        <span class="skill">IT Support</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title" onclick="toggleDropdown('exp2',this)">
+                    <h3>Logistics Coordinator @ GetWine</h3>
+                    <span class="date">2020 - 2020</span>
+                    <span class="arrow">+</span>
+                </div>
+                <div class="experience-details" id="exp2">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\getwine.png" alt="Company Logo" class="company-logo">
+
+                    <div class="experience-header-row">
+                        <i class="fa-solid fa-map-pin"></i> <!-- Location Pin Icon -->
+                        <span>Salt River, South Africa</span>
+                        <i class="fa-solid fa-link"></i> <!-- Website Link Icon -->
+                        <span><a href="www.getwine.co.za" class="custom-link">www.getwine.co.za</a></span>
+                    </div>
+                    <p>
+                        Managed the packing process and coordinated timely delivery of stock, 
+                        ensuring efficient workflow and adherence to schedules through strong 
+                        time management skills.
+                    </p>
+                    <div class="experience-skills">
+                        <span class="skill">Time Management</span>
+                        <span class="skill">Logistics</span>
+                        <span class="skill">Warehouse Worker</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title" onclick="toggleDropdown('exp4',this)">
+                    <h3>Operations Supervisor @ Jump- & Ropeyard</h3>
+                    <span class="date">2019 - 2020</span>
+                    <span class="arrow">+</span>
+                </div>
+                <div class="experience-details" id="exp4">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\jumpyard.png" alt="Company Logo" class="company-logo">
+
+                    <div class="experience-header-row">
+
+                        <i class="fa-solid fa-map-pin"></i> <!-- Location Pin Icon -->
+                        <span>Somerset West, South Africa</span>
+                        <i class="fa-solid fa-link"></i> <!-- Website Link Icon -->
+                        <span><a href="https://www.facebook.com/lourensfordmarket/photos/-new-at-lourensford-market-jump-ropeyard-for-kidswe-have-a-new-activity-launchin/2302523256449203/" class="custom-link">www.jumpandropeyard.co.za</a></span>
+                    </div>
+                    <p>
+                        Oversaw daily operations through staff supervision and guidance, enforced
+                        safety regulations, managed inventory levels, and handled end-of-day cash-up
+                        procedures to ensure accuracy and accountability.
+                    </p>
+                    <div class="experience-skills">
+                        <span class="skill">Supervisor</span>
+                        <span class="skill">Safety & Security</span>
+                        <span class="skill">Cash Up</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-title" onclick="toggleDropdown('exp3',this)">
+                    <h3>Technical Support @ CoffeeDotCom</h3>
+                    <span class="date">2018 - 2020</span>
+                    <span class="arrow">+</span>
+                </div>
+                <div class="experience-details" id="exp3">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\dotcom.png" alt="Company Logo" class="company-logo">
+
+                    <div class="experience-header-row">
+                        <i class="fa-solid fa-map-pin"></i> <!-- Location Pin Icon -->
+                        <span>Strand, South Africa</span>
+                        <i class="fa-solid fa-link"></i> <!-- Website Link Icon -->
+                        <span><a href="https://www.facebook.com/photo/?fbid=862307600616172&set=pob.100005108208751" class="custom-link">www.coffeedotcom.za</a></span>
+
+                    </div>
+                    <p>
+                        Provided technical support, installed and configured CCTV systems,
+                        and developed static websites to meet client needs and enhance security
+                        and online presence.
+                    </p>
+                    <div class="experience-skills">
+                        <span class="skill">CCTV</span>
+                        <span class="skill">Technical Support</span>
+                        <span class="skill">Static Website</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+        <div class="skills-container">
+            <h2>Skills</h2>
+            <div class="skills-image">
+            <a href="https://www.yeastar.com/">
+            <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\yeastar.png" alt="" />
+            </a>
+		<a href="https://www.ui.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\ubi.png" alt="" />
+                </a>
+		<a href="https://www.hpe.com/za/en/networking/hpe-aruba-networking.html">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\aru.png" alt="" />
+                </a>
+		<a href="https://openvpn.net/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\openvpn.png" alt="" />
+                </a>
+		<a href="https://www.office.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\microsoft.png" alt="" />
+                </a>
+		<a href="https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2019">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\windows.png" alt="" />
+                </a>
+		<a href="https://www.wireshark.org/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\wireshark.png" alt="" />
+                </a>
+        <a href="https://azure.microsoft.com/en-us/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\azure.svg" alt="" />
+                </a>
+                <a href="https://www.sage.com/en-za/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\pastel.png" alt="" />
+                </a>
+                <a href="https://www.eset.com/za/?utm_source=google&utm_medium=cpc&utm_campaign=_za_eng_b2c_google_s_br_rev_gen_d_Brand&gad_source=1&gclid=Cj0KCQjwqcO_BhDaARIsACz62vNYg1SX5H8nbT8cSDJCzEdL745HCPCMXeCrIFTCgVMLLVBBxz1TtIMaAgFcEALw_wcB">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\eset.png" alt="" />
+                </a>
+                <a href="https://www.dahuasecurity.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\dahua.png" alt="" />
+                </a>
+                <a href="https://progensystems.org/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\progen.png" alt="" />
+                </a>
+		<a href="https://www.pfsense.org//">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\pf.png" alt="" />
+                </a>
+		<a href="https://workspace.google.com/intl/en_za/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\google.png" alt="" />
+                </a>
+		<a href="https://www.make.com/en">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\make.png" alt="" />
+                </a>
+                <a href="https://www.jotform.com/resources/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\Jotform.png" alt="" />
+                </a>
+		
+       <a href="https://www.w3schools.com/html/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\html5.svg" alt="" />
+                </a>
+                <a href="https://www.w3schools.com/css/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\css3.svg" alt="" />
+                </a>
+                <a href="https://www.php.net/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\php.svg" alt="" />
+                </a>
+                <a href="https://www.w3schools.com/js/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\javascript.svg" alt="" />
+                </a>
+                <a href="https://github.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\github.svg" alt="" />
+                </a>
+                <a href="https://en-za.wordpress.org/download/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\wordpress.svg" alt="" />
+                </a>
+                <a href="https://cplusplus.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\cplusplus.svg" alt="" />
+                </a>
+                <a href="https://getbootstrap.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\bootstrap.svg" alt="" />
+                </a>
+                <a href="https://jquery.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\jquery.svg" alt="" />
+                </a>
+                <a href="https://www.python.org/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\python.svg" alt="" />
+                </a>
+                <a href="https://www.java.com/en/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\java.svg" alt="" />
+                </a>
+                <a href="https://www.mysql.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\mysql.svg" alt="" />
+                </a>
+                <a href="https://firebase.google.com/">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\firebase.svg" alt="" />
+                </a>
+                <a href="https://developer.android.com/studio">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\androidstudio.svg" alt="" />
+                </a>
+                
+            </div>
         </div>
     </section>
 
-    <section id="projects">
-
-        <div class="project-container">
-            <h2>My Projects</h2>
-            <h4>Developments</h4>
-            <div class="card-container">
-                <div class="card">Ticketing System</div>
-                <div class="card">Memo</div>
-                <div class="card">Snake</div>
-                <div class="card">Calculator</div>
-                <div class="card">Groceries</div>
-                <div class="card">3rd Year Project 2020</div>
-
-
+    <section class="card-section">
+        <h2>My Projects</h2>
+        <h4>Websites</h4>
+        <div class="card-row">
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\barbaroozos.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>
+                        Barbaroozos
+                    </h3>
+                    <p>Static wesbite that makes use of HTML, CSS and JS.</p>
+                </div>
             </div>
-            <h4>IT Infrastcurte</h4>
-            <div class="card-container">
-                <div class="card">Yeastar P550</div>
-                <div class="card">MicroTik Server</div>
-                <div class="card">PFsense</div>
-                <div class="card">HP Server Repair</div>
-                <div class="card">Managed Switches & VLAN</div>
-                <div class="card">Server Build and Installtion</div>
-            </div>
-        
-        <h4>Training</h4>
-        <div class="card-container">
-            <div class="card">OneDrive</div>
-            <div class="card">ESET Anti-Virus</div>
-            <div class="card">Richo Printers & Copiers</div>
-            <div class="card">VoIP</div>
-            <div class="card">Ticketing System</div>
-            <div class="card">Office 365</div>
-        </div>
 
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\dkps.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3> De Kuilen Primary School</h3>
+                    <p>Dynamic high traffic website through wordpress that gets updated frequenlty.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\expertree.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>Tree Expert</h3>
+                    <p>Static website that was built on google sites.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\cp.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>
+                        Portfolio
+                    </h3>
+                    <p>Dynamic website that makes use of HTML, CSS, JS and Netlify.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\localislekker.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3> Local is Lekker Driving School</h3>
+                    <p>Static website HTML and CSS</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\coffeedotcom.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>CoffeeDotCom</h3>
+                    <p>Static website that uses HTML, CSS and JS</p>
+                </div>
+            </div>
         </div>
+        <br><br>
+        <h4>Developments</h4>
+
+        <div class="card-row">
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\ticketingsystem.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>
+                        Ticketing System
+                    </h3>
+                    <p>This system allows users to submit IT support tickets by entering 
+                    their name, describing the problem, and marking urgency. Each ticket 
+                    is assigned a unique ID, saved via PHP, and confirmed with an alert.<br> 
+                    XAMPP, HTML, CSS, JS, PHP</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\housepoints.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>Color House Point Tracking System</h3>
+                    <p>
+                        The system allows teachers to allocate house points to students 
+                        based on positive behavior, automatically updates totals for each 
+                        house, and submits the data to a backend for storage and tracking.<br>
+                        XAMPP, HTML, CSS, JS, PHP, JQuery.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\pygame.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>Pygame</h3>
+                    <p>Alien Invaders is a retro-style 2D arcade shooter where players control 
+                    a pixel spaceship to destroy waves of descending aliens. Difficulty increases 
+                    with score, adding faster enemies, wave-like movement, random lasers, and power-ups. 
+                    High scores are tracked and saved in a text document for replay value.
+                    <br>Python</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\emake.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>
+                        EMake Automation
+                    </h3>
+                    <p>I’ve automated user requests using Jotform, Make.com, Dropbox, and email: 
+                    Users submit a form via Jotform, which populates a Word document. The document 
+                    is saved to Dropbox and then emailed to the relevant recipients—streamlining requests, 
+                    ensuring consistency, and reducing manual work.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\dkps.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3> De Kuilen Primary School</h3>
+                    <p>Dynamic high traffic website through wordpress that gets updated frequenlty.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="C:\Users\Willem Smit\OneDrive - De Kuilen Primary School\Desktop\WAS\expertree.png" alt="Company Logo" class="company-logo">
+                </div>
+                <div class="card-description">
+                    <h3>Tree Expert</h3>
+                    <p>Static website that was built on google sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
         <div class="contact-container">
-            <h4>Contact</h4>
-            <ul>
-                <li>
-                    <h3>Project One</h3>
-                    <p>A web app built with PHP and JavaScript.</p>
-                    <a href="https://example.com/project-one" target="_blank">View Project</a>
-                </li>
-                <li>
-                    <h3>Project Two</h3>
-                    <p>A mobile app built with React Native.</p>
-                    <a href="https://example.com/project-two" target="_blank">View Project</a>
-                </li>
-            </ul>
+            <h2>Contact Me</h2>
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
     </section>
 
@@ -175,137 +492,11 @@
                 <a href="https://www.youtube.com/@willemsmit5984" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
             </div>
             <p>Contact me at <a href="mailto:willemandries99@gmail.com">willemandries99@gmail.com</a></p>
-            <p>Willem Andries Smit</p>
+            <p>Willem Andries Smit © Copyright 2024 | WAS All Rights Reserved </p>
         </div>
     </footer>
 
-    <!-- Typing Effect Script -->
-    <script>
-        let i = 0;
-        const text = "I'm Willem Smit";  // The text you want to type
-        const speed = 120;  // Adjust typing speed (in milliseconds)
+    <script src="script.js"></script>
 
-        function typeWriter() {
-            if (i < text.length) {
-                document.getElementById("typing-text").innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);  // Recursive function to keep typing
-            }
-        }
-
-        // Start the typing effect once the page is fully loaded
-        window.onload = typeWriter;
-        // Get the canvas element and its context
-        const canvas = document.getElementById('universe');
-        const ctx = canvas.getContext('2d');
-
-        // Set canvas size
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Star properties
-        const stars = [];
-        const numStars = 300; // Number of stars to create
-
-        // Mouse position
-        let mouseX = canvas.width / 2;
-        let mouseY = canvas.height / 2;
-        let mouseProximity = 10; // Mouse proximity to trigger lighting up stars
-
-        // Create stars
-        for (let i = 0; i < numStars; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                size: Math.random() * 2 + 1, // Star size
-                speed: Math.random() * 0.5 + 0.3, // Star speed (how fast it moves)
-                alpha: Math.random() * 0.1 + 0.2, // Star brightness
-                connectedStars: []
-            });
-        }
-
-        // Function to animate the stars
-        function animateStars() {
-            // Clear the canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Loop through each star
-            stars.forEach(star => {
-                // Update the position of each star based on its speed
-                star.x += star.speed * (Math.random() - 0.5);
-                star.y += star.speed * (Math.random() - 0.5);
-
-                // Draw the star
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2, false);
-                ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
-                ctx.fill();
-            });
-
-            // Draw connections (network effect)
-            connectStars();
-
-            // Add the mouse effect (lighting up stars)
-            lightUpStars(mouseX, mouseY);
-
-            // Request the next frame
-            requestAnimationFrame(animateStars);
-        }
-
-        // Function to light up stars near the mouse
-        function lightUpStars(mouseX, mouseY) {
-            stars.forEach(star => {
-                const dist = Math.sqrt(Math.pow(star.x - mouseX, 2) + Math.pow(star.y - mouseY, 2));
-
-                // Calculate the distance and adjust brightness
-                const intensity = Math.max(0, 1 - dist / mouseProximity); // Distance-based intensity
-                star.alpha = Math.random() * 0.5 + 0.5 + intensity * 0.7; // Increase brightness as mouse gets closer
-            });
-        }
-
-        // Function to connect stars (like a network)
-        function connectStars() {
-            for (let i = 0; i < stars.length; i++) {
-                for (let j = i + 1; j < stars.length; j++) {
-                    const star1 = stars[i];
-                    const star2 = stars[j];
-
-                    const dist = Math.sqrt(Math.pow(star1.x - star2.x, 2) + Math.pow(star1.y - star2.y, 2));
-
-                    // Draw a line between stars if they are close enough
-                    if (dist < 150) { // You can adjust the distance threshold here
-                        const alpha = (1 - dist / 150) * 0.5; // Line fades as stars get farther apart
-                        ctx.beginPath();
-                        ctx.moveTo(star1.x, star1.y);
-                        ctx.lineTo(star2.x, star2.y);
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
-            }
-        }
-
-        // Event listener to track mouse position
-        canvas.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        // Start the animation loop
-        animateStars();
-        // Adjust canvas size on window resize
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        // Set initial canvas size
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-
-
-    </script>
 </body>
 </html>
