@@ -138,3 +138,114 @@ function toggleDropdown(expId, element) {
      // Set initial canvas size
      canvas.width = window.innerWidth;
      canvas.height = window.innerHeight;
+
+     const devItems = document.querySelectorAll('.dev-project-wrapper');
+
+    const devObserver = new IntersectionObserver(devEntries => {
+      devEntries.forEach(devEntry => {
+        if (devEntry.isIntersecting) {
+          devEntry.target.classList.add('dev-visible');
+        } else {
+          devEntry.target.classList.remove('dev-visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    devItems.forEach(devItem => {
+      devObserver.observe(devItem);
+    });
+
+    document.querySelectorAll('.carousel').forEach(carousel => {
+  const images = carousel.querySelectorAll('img');
+  let currentIndex = 0;
+
+  const showImage = (index) => {
+    images.forEach((img, i) => {
+      img.style.display = i === index ? 'block' : 'none';
+    });
+  };
+
+  carousel.querySelector('.prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  carousel.querySelector('.next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  // Automatically change image every 2 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }, 4000); // 2000 milliseconds = 2 seconds
+
+  showImage(currentIndex); // Show the first image initially
+});
+
+const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const img = entry.target.querySelector('img');
+      
+      if (entry.isIntersecting) {
+        img.style.transform = 'translate(0, 0)';
+        img.style.opacity = '1';
+      } else {
+        // Move out to a random position again
+        const x = Math.floor(Math.random() * 400 - 200);
+        const y = Math.floor(Math.random() * 400 - 200);
+        img.style.transform = `translate(${x}px, ${y}px)`;
+        img.style.opacity = '0';
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('#skills .skills-image a').forEach(anchor => {
+    const img = anchor.querySelector('img');
+    
+    // Initial random position
+    const x = Math.floor(Math.random() * 400 - 200);
+    const y = Math.floor(Math.random() * 400 - 200);
+    img.style.transform = `translate(${x}px, ${y}px)`;
+    img.style.opacity = '0';
+    
+    skillsObserver.observe(anchor);
+  });
+
+  const experienceObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.experience-item').forEach(item => {
+    item.classList.add('hidden'); // Initial state
+    experienceObserver.observe(item);
+  });
+
+  // Function to handle the scroll effect
+window.addEventListener('scroll', function () {
+    const aboutContainer = document.querySelector('.about-container');
+    const aboutSection = document.getElementById('about');
+    
+    // Get the position of the section relative to the viewport
+    const sectionPosition = aboutSection.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    // Calculate opacity: the closer the section is to the viewport, the higher the opacity
+    const opacity = 1 - (sectionPosition / windowHeight);
+
+    // Set the opacity, ensuring it stays within 0 to 1 range
+    aboutContainer.style.opacity = Math.min(Math.max(opacity, 0), 1);
+});
