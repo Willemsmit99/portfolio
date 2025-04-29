@@ -114,7 +114,6 @@ nav .container {
 
 /* Header Section */
 header {
-    /*background-image: url('path/to/your/background-image.jpg');  Replace with your background image */
     background-size: cover;
     color: white;
     padding: 80px 0;
@@ -586,6 +585,7 @@ ul {
 }
 
 .contact-container {
+    display: none;
     max-width: 800px;
     margin: auto;
     text-align: center;
@@ -663,7 +663,6 @@ ul {
       gap: 40px;
       width:100%;
       align-items: center;
-      Background-Color:;
       margin:0 auto;
       text-align:center;
     
@@ -905,15 +904,15 @@ footer {
     
 
     header h1 {
-        font-size: 0.3rem;
+        font-size: 0.8rem;
     }
 
     header p {
-        font-size: 0.3rem;
+        font-size: 0.8rem;
     }
 
     #typing-text {
-        font-size: 0.01rem;
+        font-size: 0.8rem;
     }
     .experience-item {
         width: 100%;
@@ -990,10 +989,16 @@ footer {
         width: 100%;
     }
     header h1 {
-        font-size: 0.3rem;
+        font-size: 1.9rem;
     }
 
     header p {
-        font-size: 0.3rem;
+        font-size: 1.2rem;
+    }
+    #typing-text {
+        font-size:1.9rem;
+    }
+    .hover-underline    {
+        display: none;
     }
 }
